@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout twilic-ruby
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Checkout twilic-rust
         run: git clone --depth 1 https://github.com/twilic/twilic-rust.git ../twilic-rust
