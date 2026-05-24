@@ -6,11 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-### Added
-
-- Rust interop fixture stream, value parity tests, and bidirectional smoke scripts under `scripts/`.
-- Interop helpers in `lib/twilic/core/interop_fixtures.rb` for cross-language fixture emission and decoding.
-
 ## [3.0.0] - 2026-05-22
 
 Initial public release of the Ruby implementation of Twilic, tracking the v3 release line shared with [twilic-rust](https://github.com/twilic/twilic-rust) and [twilic-js](https://github.com/twilic/twilic-js).
@@ -22,6 +17,8 @@ Initial public release of the Ruby implementation of Twilic, tracking the v3 rel
 - Stateful transport features: base snapshots, state patch encoding, template batch handling, control stream support, and trained dictionary support.
 - Public gem API at `Twilic` with implementation under `lib/twilic/core/`.
 - Spec conformance tests and traceability mapping in [`docs/SPEC-TEST-TRACEABILITY.md`](SPEC-TEST-TRACEABILITY.md).
+- Rust interop fixture stream, value parity tests, and bidirectional smoke scripts under `scripts/`.
+- Interop helpers in `lib/twilic/core/interop_fixtures.rb` for cross-language fixture emission and decoding.
 - GitHub Actions workflows for CI, Interop, commitlint, invisible character check, PR message validation, and tagged gem publish.
 - GitHub issue templates, pull request template, and contributor documentation.
 - Markdown formatting with Prettier and markdownlint.
