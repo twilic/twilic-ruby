@@ -1,0 +1,27 @@
+name: Interop
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  rust-interop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout twilic-ruby
+        uses: actions/checkout@v4
+
+      - name: Checkout twilic-rust
+        run: git clone --depth 1 https://github.com/twilic/twilic-rust.git ../twilic-rust
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Run bidirectional interop
+        run: bash scripts/check-interop.sh
